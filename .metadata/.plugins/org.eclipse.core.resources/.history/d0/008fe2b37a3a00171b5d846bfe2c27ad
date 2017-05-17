@@ -1,8 +1,0 @@
-package com.apachekafka.producer;
-
-public class ProducerKafka {
-
-	public static void main(String[] args) {
-		Properties Properties = new Properties();
-	}
-}
