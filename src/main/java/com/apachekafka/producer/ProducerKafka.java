@@ -30,7 +30,7 @@ public class ProducerKafka {
 		properties.put("bootstrap.servers", "localhost:9092");    
 		properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");                        
 		properties.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-		properties.put("partitioner.class", "com.apachekafka.patitioner.ProducerKafkaPartitioner");
+	//	properties.put("partitioner.class", "com.apachekafka.patitioner.ProducerKafkaPartitioner");
 		
 		/**
 		 * Kafka-Producer instance - This is the instance to which we will pass the properties.
@@ -41,7 +41,7 @@ public class ProducerKafka {
 		
 		try {
 	
-			for(int i = 101; i <= 150; i++) {
+			for(int i = 1; i <= 2; i++) {
 				myProducer.send(new ProducerRecord<String, String>("my-demo-topic", "message", "Message Value : " + Integer.toString(i)));
 			}
 		} catch (Exception e) {
